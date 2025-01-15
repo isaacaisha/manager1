@@ -23,8 +23,8 @@ CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
-
+#DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = True
 # load production server from .env
 ALLOWED_HOSTS = [
     'test-cop.copromanager.com', 'www.test-cop.copromanager.com', '35.180.33.83',
