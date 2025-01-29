@@ -13016,6 +13016,11 @@ h1.mb-0 {
   font-size: large;
 }
 
+h1.mb-0 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
 /* Custom CSS for QR Code Size */
 .qr-code-img {  
     width: 100px !important;  /* Adjust to your desired width */
