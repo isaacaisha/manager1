@@ -57,26 +57,7 @@ class Migration(migrations.Migration):
                 ('nom', models.CharField(max_length=255, verbose_name='Name')),
                 ('email', models.EmailField(max_length=254, verbose_name='Email')),
                 ('user', models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='coproprietaire_profile', to=settings.AUTH_USER_MODEL, verbose_name='User')),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ('residence', models.ManyToManyField(blank=True, related_name='coproprietaire_residences', to='dashboard.residence', verbose_name='Residences')),
-=======
-                ('residence', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='coproprietaire_residences', to='dashboard.residence', verbose_name='Residences')),
-=======
-                ('residence', models.ManyToManyField(blank=True, related_name='coproprietaire_residences', to='dashboard.residence', verbose_name='Residences')),
->>>>>>> eb4b5a1 (actualized database)
-            ],
-        ),
-        migrations.CreateModel(
-            name='ModificationLog',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('modele_modifie', models.CharField(max_length=255, verbose_name='Modified Model')),
-                ('action', models.CharField(max_length=50, verbose_name='Action')),
-                ('date', models.DateTimeField(auto_now_add=True, verbose_name='Date')),
-                ('details', models.TextField(verbose_name='Details')),
-                ('utilisateur', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='User')),
->>>>>>> 040c91a (fixed background color for input role choice, residence required for coproprietaire creation... .)
             ],
         ),
         migrations.CreateModel(
@@ -115,15 +96,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='residence',
             name='supersyndic',
-<<<<<<< HEAD
-<<<<<<< HEAD
             field=models.ManyToManyField(blank=True, related_name='supersyndic_residences', to='dashboard.supersyndic', verbose_name='SuperSyndic'),
-=======
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='residences', to='dashboard.supersyndic', verbose_name='SuperSyndic'),
->>>>>>> b7effdb (updated  apps/dashboard/views.py)
-=======
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='supersyndic_residences', to='dashboard.supersyndic', verbose_name='SuperSyndic'),
->>>>>>> 040c91a (fixed background color for input role choice, residence required for coproprietaire creation... .)
         ),
         migrations.AddField(
             model_name='coproprietaire',
@@ -148,15 +121,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='residence',
             name='syndic',
-<<<<<<< HEAD
-<<<<<<< HEAD
             field=models.ManyToManyField(blank=True, related_name='syndic_residences', to='dashboard.syndic', verbose_name='Syndic'),
-=======
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='residences', to='dashboard.syndic', verbose_name='Syndic'),
->>>>>>> b7effdb (updated  apps/dashboard/views.py)
-=======
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='syndic_residences', to='dashboard.syndic', verbose_name='Syndic'),
->>>>>>> 040c91a (fixed background color for input role choice, residence required for coproprietaire creation... .)
         ),
         migrations.CreateModel(
             name='Prestataire',
