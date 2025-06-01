@@ -27,8 +27,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 # load production server from .env
 ALLOWED_HOSTS = [
-    'test-cop.copromanager.com', 'www.test-cop.copromanager.com', '35.180.33.83',
-    'your.copromanager.pro', 'www.your.copromanager.pro', '142.93.235.205',
+    'manager1.siisi.online', 'www.manager1.siisi.online', '35.180.33.83',
+    '142.93.235.205',
     'localhost', '127.0.0.1', config('SERVER', default='127.0.0.1'),
     '192.168.157.182', '0.0.0.0'
 ]
@@ -41,10 +41,8 @@ PROXY = {
 
 # Set secure headers (Optional but recommended for production)
 CSRF_TRUSTED_ORIGINS = [
-    'https://test-cop.copromanager.com',
-    'https://www.test-cop.copromanager.com',
-    'https://your.copromanager.pro',
-    'https://www.your.copromanager.pro',
+    'https://manager1.siisi.online',
+    'https://www.manager1.siisi.online',
 ]
 
 # Allow all origins to access the API
