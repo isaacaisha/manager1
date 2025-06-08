@@ -28,7 +28,7 @@ sudo certbot --nginx
 sudo ln -s /etc/nginx/sites-available/manager1 /etc/nginx/sites-enabled/
 
 sudo certbot certificates
-sudo certbot --nginx -d manager1.siisi.online -d www.manager1.siisi.online
+sudo certbot --nginx -d real-copromanager.siisi.online -d www.real-copromanager.siisi.online
 
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 
